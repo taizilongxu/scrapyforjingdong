@@ -15,3 +15,4 @@ class TutorialItem(scrapy.Item):
     price = scrapy.Field()
     comment = scrapy.Field()
     product_id = scrapy.Field()
+    category = scrapy.Field()
