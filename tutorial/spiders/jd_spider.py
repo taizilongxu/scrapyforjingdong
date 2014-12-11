@@ -67,12 +67,12 @@ class JdSpider(scrapy.Spider):
         title = response.xpath('//title/text()').extract()[0][:-6]
         price = response.xpath('/html/body/div[4]/div[4]/font/text()').extract()[0]
         product_id = response.url.split('/')[-1][:-5]
-        category = response.xpath('/html/body/div[3]/a/text()').extract()
+        category = response.xpath('/html/body/div[3]/a/text()').extract()  # 这里增加了category
         print '>'.join(category)
 
 
         item = TutorialItem()
-        item['category'] = '>'.join(category)
+        item['category'] = '>'.join(category)  # 需要在item里增加category项进行储存
         item['title'] = title
         item['price'] = price
         item['product_id'] = product_id
