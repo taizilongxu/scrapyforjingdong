@@ -5,7 +5,7 @@
 
     watch -n 1 -d 'wc -l items.csv;du -h items.csv'
 
-观察文件变化
+可以观察文件变化
 
 
 结果:
